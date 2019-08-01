@@ -8,6 +8,7 @@
     
     <script>
     
+         // Concatenação de Strings de um objeto
          var endereco = {
          rua: "Rua dos pinheiros",
          numero: 1293,
@@ -18,6 +19,9 @@
         
         console.log("O usuário mora em " + endereco.cidade + "/" + endereco.uf + ", no bairro " + endereco.bairro + ", na rua " + endereco.rua + " com nº " + endereco.numero + ".");
 
+        
+        
+        // Apenas números pares, partindo de um número inicial e final
         pares(1, 10);
         
         function pares(x, y)
@@ -33,6 +37,7 @@
         }
         
         
+        // Verificar a existência de conteúdo em Array a partir de uma String
         function temHabilidade(dados, filtro)
         {
             if(dados.indexOf(filtro) >= 0)
@@ -49,7 +54,7 @@
         temHabilidade(dados, filtro);        
         
         
-        
+        // Classificação de uma situação através de uma estrutura de decisão
         function experiencia(anos)
         {
             var exp = "";
@@ -82,6 +87,7 @@
 
         
         
+        // Listagem de conteúdo a partir de dados previamente informados no objeto
         var usuarios = [
          {
              nome: "Diego",
