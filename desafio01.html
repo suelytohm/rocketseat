@@ -1,0 +1,118 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Teste</title>
+</head>
+<body>
+    
+    
+    <script>
+    
+         var endereco = {
+         rua: "Rua dos pinheiros",
+         numero: 1293,
+         bairro: "Centro",
+         cidade: "São Paulo",
+         uf: "SP"
+        };
+        
+        console.log("O usuário mora em " + endereco.cidade + "/" + endereco.uf + ", no bairro " + endereco.bairro + ", na rua " + endereco.rua + " com nº " + endereco.numero + ".");
+
+        pares(1, 10);
+        
+        function pares(x, y)
+        {            
+            console.log("pares:");
+            for(var i = x; i <= y; i++)
+            {
+                if(i%2 == 0)
+               {
+                   console.log(i);
+               }
+            }
+        }
+        
+        
+        function temHabilidade(dados, filtro)
+        {
+            if(dados.indexOf(filtro) >= 0)
+            {
+                console.log("sim");
+                return true;
+            }
+            console.log("não");
+            return false;
+        }
+
+        var filtro = "javascript";
+        var dados = ["javascript", "ReactJS", "Node.js"]
+        temHabilidade(dados, filtro);        
+        
+        
+        
+        function experiencia(anos)
+        {
+            var exp = "";
+            if(anos > 0 && anos <= 1)
+            {
+                exp = "Iniciante";
+            }
+            else if(anos > 1 && anos <= 3)
+            {
+                exp = "Intermediário";    
+            }
+            else if(anos > 3 && anos <= 6)
+            {
+                exp = "Avançado";    
+            }
+            else if(anos >= 7)
+            {
+                exp = "Jedi Master";    
+            }            
+            else
+            {
+                exp = "Idade Inválida";
+            }
+            console.log(anos);
+            console.log(exp);
+        }
+        
+        var anosEstudo = 7;
+        experiencia(anosEstudo);
+
+        
+        
+        var usuarios = [
+         {
+             nome: "Diego",
+             habilidades: ["Javascript", "ReactJS", "Redux"]
+         },
+         {
+             nome: "Gabriel",
+             habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+         }
+        ];        
+        
+        
+        function habilidadesUsers(usuarios)
+        {
+            for(let valor of usuarios)
+            {
+                var texto = "O " + valor.nome + " possui as habilidades: " + valor.habilidades.join(", ");
+                console.log(texto);
+            }
+        }
+        
+        habilidadesUsers(usuarios);
+        
+        /*
+        console.log
+        
+        O Diego possui as habilidades: Javascript, ReactJS, Redux
+        O Gabriel possui as habilidades: VueJS, Ruby on Rails, Elixir
+        */
+        
+        
+    </script>
+</body>    
+</html>
